@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <link href = "https://cdn.jsdeliver.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel = "stylesheet">
+    </header>
+    <body>
+        <script
+            src="https://cdn.jsdeliver.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FYyoEForCG1yvwx9Hj09IcYn3nv7wiPV1z7YYwJrWVcXK/BmnVDxK+D2scQbITxI"
+            crossorigin="anonymous"
+        ></script>
+        <a href = "https://www.linkedin.com/in/eddiehazeldine"> my linkedin </a>
+        <br>
+        <a href = "https://www.linkedin.com/in/alexander-jackson-07351443a/"> al linkedin </a>
+        <br>
+        <a href = "https://www.linkedin.com/in/yusuf-abbas-228a19365/"> yusuf linkedin </a>
+        <br>
+        <a href = "https://en.wikipedia.org/wiki/Josephine_Butler_College,_Durham"> yusufs feature on the jospehine butler wikipedia </a>
+        <br>
+        <a href = "https://www.linkedin.com/in/noah-davies-a40579383/"> noah linkedin </a>
+        <br>
+        <a href="https://clear-choices.appwrite.network"> 
+            <img src="Image dont ask.png" alt="super cool hackathon project me and yusuf did" width = "200" height = "150">
+        </a>
+        <br>
+        <button onclick="coolColours()">party mode</button>
+        <script>
+            let coloursRunning = false;
+            let rainbowInterval;
+            let i = 0;
+            let colours = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+            
+            function coolColours() {
+                if (coloursRunning) {
+                    clearInterval(rainbowInterval);
+                    document.body.style.backgroundColor = "white";
+                    coloursRunning = false;
+                } else {
+                    rainbowInterval = setInterval(function() {
+                        document.body.style.backgroundColor = colours[i];
+                        i = (i + 1) % colours.length;
+                    }, 500);
+                    coloursRunning = true;
+                }
+            }
+        </script>
+    </body>
+</html>
