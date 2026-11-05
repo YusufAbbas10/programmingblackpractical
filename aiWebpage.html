@@ -69,6 +69,28 @@
         </div>
     </div>
 
+        <button onclick="coolColours()">party mode</button>
+
+  <script>
+    let coloursRunning = false;
+    let rainbowInterval;
+    let i = 0;
+    let colours = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+    function coolColours() {
+      if (coloursRunning) {
+          clearInterval(rainbowInterval);
+          document.body.style.backgroundColor = "white";
+          coloursRunning = false;
+      } else {
+          rainbowInterval = setInterval(function() {
+              document.body.style.backgroundColor = colours[i];
+              i = (i + 1) % colours.length;
+          }, 500);
+          coloursRunning = true;
+    }
+  }
+  </script>
+
 
 
 
