@@ -27,15 +27,52 @@
                 </ul>
             </div>
 
-            <div class = "col-sm-4">
-                <img src = https://upload.wikimedia.org/wikipedia/commons/3/31/Mark_Zuckerberg_at_the_37th_G8_Summit_in_Deauville_018_v1.jpg alt = "The Zuck" width = 250 height = 400>
+            <div class = "col-sm-3">
+                <img src = https://upload.wikimedia.org/wikipedia/commons/3/31/Mark_Zuckerberg_at_the_37th_G8_Summit_in_Deauville_018_v1.jpg alt = "The Zuck" width = 125 height = 200>
             </div>
         </div>
+        <br>
         <div class="row">
-            <div class = "col-sm-4">
-                <p>Meta's Story</p>   
+            <div class = "col-sm-6" >
+                <h3>Meta's Story</h3>
+                <p>Meta is a benevolant company that loves analysing personal data to make a better society</p>
+                <p>Originally founded in 2004 by Mark Zuk as TheFacebook Inc - it began as a way to organise Facebook</p>
+                <p>Founders of Facebook, they connect individuals across the world</p>   
+            </div>
+            <div class = "col-sm-1" ></div>
+            <div class = "col-sm-2">
+                <form id = "metaForm">
+                    <p>Give you data to META!</p>
+                    <label for = "fname">First Name:</label><br>
+                    <input type = "text" id = "fname" name = "fname">
+                    <label for = "lname">Last Name:</label><br>
+                    <input type = "text" id = "lname" name = "lname"><br><br>
+                    <input type = "submit" value = "Submit">
+                </form>
             </div>
         </div>
+        <button><a href = "Homepage/index.html">Leave the world of Meta</a></button><br>
+        <button onClick = "coolColours()">Party Time</button>
   </div>
+  <script>
+    let coloursRunning = false;
+    let rainbowInterval;
+    let i = 0;
+    let colours = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+    function coolColours()    
+    {
+        if (coloursRunning) {
+            clearInterval(rainbowInterval);
+            document.body.style.backgroundColor = "white";
+            coloursRunning = false;
+        } else {
+            rainbowInterval = setInterval(function() {
+                document.body.style.backgroundColor = colours[i];
+                i = (i + 1) % colours.length;
+                }, 500);
+            coloursRunning = true;
+        }
+    }
+  </script>
 </body>
 </html>
