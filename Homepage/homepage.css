@@ -47,12 +47,15 @@ li a {
   background-color: #838bcd;
   border-radius: 10px;
   transition: 0.3s ease;
+  color: inherit;
+  text-decoration: none;
 }
 
 li a:hover {
   background-color: #0d0855;
   color: white;
   transform: translateY(-3px);
+  text-decoration: none;
 }
 
 /* Links */
