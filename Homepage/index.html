@@ -45,6 +45,10 @@
     <button onclick="coolColours()">party mode</button>
 
   <script>
+    let coloursRunning = false;
+    let rainbowInterval;
+    let i = 0;
+    let colours = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
     function coolColours() {
       if (coloursRunning) {
           clearInterval(rainbowInterval);
@@ -94,7 +98,7 @@
         </div>
       </div>
 
-      <img src="Downloads/fortnitecomputer.png" alt="fortnite" class="bottom-left-image">
+      <img src="Homepage/fortnitecomputer.png" alt="fortnite" class="bottom-left-image">
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
